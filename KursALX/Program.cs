@@ -1,4 +1,5 @@
-﻿using KursALX.Lessons;
+﻿using KursALX.Assigments;
+using KursALX.Lessons;
 using KursALX.Lessons.Classes;
 
 //Console.WriteLine("Mateusz Sadurski");
@@ -10,4 +11,5 @@ using KursALX.Lessons.Classes;
 //l1variable.WriteSmth();
 //L1SimpleVariables.Test();
 //L1Strings.ConcatenationTest();
-L1Constructors.Test();
+//L1Constructors.Test();
+ConstructorWsi.Test();
