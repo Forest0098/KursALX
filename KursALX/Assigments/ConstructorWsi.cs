@@ -9,7 +9,7 @@ namespace KursALX.Assigments
 {
     public class ConstructorWsi
     {
-        public static void Test()
+        public static void Run()
         {
             var krowa = new Krowa("black", "bull", false);
 

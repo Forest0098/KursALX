@@ -10,7 +10,7 @@ namespace KursALX.Assigments
     {
         public static void Run()
         {
-            ConstructorWsi.Test();
+            ConstructorWsi.Run();
         }
     }
 }
