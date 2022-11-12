@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KursALX.Assigments
+namespace KursALX.Assigments.M1
 {
     public class ConstructorWsi
     {
