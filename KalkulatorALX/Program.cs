@@ -1,6 +1,7 @@
 ﻿using KalkulatorALX;
+using KalkulatorALX.Interfaces;
 
 Console.WriteLine("-- ALX CALCULATOR --");
-var calculator = new Calculator();
+ICalculator calculator = new Calculator();
 calculator.Run();
 Console.WriteLine("--------------------");

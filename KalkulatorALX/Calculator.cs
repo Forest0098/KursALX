@@ -1,9 +1,21 @@
-﻿using System;
+﻿using KalkulatorALX.Interfaces;
+using System;
 
 namespace KalkulatorALX
 {
-    public class Calculator 
+    public class Calculator : ICalculator
     {
+        List<char> ValidChars;
+        char[] ValidOperatorArray = { '+', '-', '*', '/' };
+
+        public Calculator()
+        {
+            ValidChars = new List<char>();
+            ValidChars.Add('+');
+            ValidChars.Add('-');
+            ValidChars.Add('*');
+            ValidChars.Add('/');
+        }
         public void Run()
         {
             Console.WriteLine("Running calculator...\n");
@@ -13,20 +25,31 @@ namespace KalkulatorALX
             Console.WriteLine("*\tmultiplication");
             Console.WriteLine("/\tdivision");
             Console.WriteLine();
-            Console.Write("Choose operation:  ");
             var operationCharacterInfo = Console.ReadKey();
+
+            while(ValidOperation(operationCharacterInfo.KeyChar)) 
+            {
+                operationCharacterInfo = CalculatorWaitingForKey(operationCharacterInfo);
+            }
+        }
+
+        private bool ValidOperation(char operationCharacter)
+        {
+            return ValidOperatorArray.Contains(operationCharacter);
+        }
+
+        private ConsoleKeyInfo CalculatorWaitingForKey(ConsoleKeyInfo operationCharacterInfo)
+        {
             Console.WriteLine();
             Console.Write("X number: ");
             var x = Double.Parse(Console.ReadLine());
             Console.Write("Y number: ");
             var y = Double.Parse(Console.ReadLine());
-
             PerformOperation(operationCharacterInfo.KeyChar, x, y);
 
-            //Console.WriteLine($"{x} + {y} = {Add(x,y)}");
-            //Console.WriteLine($"{x} - {y} = {Substract(x,y)}");
-            //Console.WriteLine($"{x} * {y} = {Multiply(x,y)}");
-            //Console.WriteLine($"{x} / {y} = {Divide(x,y)}");
+            Console.Write("Choose operation:  ");
+            operationCharacterInfo = Console.ReadKey();
+            return operationCharacterInfo;
         }
 
         private void PerformOperation(char operationChar, double x, double y)
@@ -40,10 +63,10 @@ namespace KalkulatorALX
                     Console.WriteLine($"{x} - {y} = {Substract(x, y)}");
                     break;
                 case '*':
-                    Console.WriteLine($"{x} * {y} = {Substract(x, y)}");
+                    Console.WriteLine($"{x} * {y} = {Multiply(x, y)}");
                     break;
                 case '/':
-                    Console.WriteLine($"{x} / {y} = {Substract(x, y)}");
+                    Console.WriteLine($"{x} / {y} = {Divide(x, y)}");
                     break;
                 default:
                     Console.WriteLine("Invalid operation...");
@@ -56,17 +79,17 @@ namespace KalkulatorALX
             return x + y;
         }
 
-        public double Substract(double x, double y)
+        private double Substract(double x, double y)
         {
             return x - y;
         }
 
-        public double Multiply(double x, double y)
+        private double Multiply(double x, double y)
         {
             return x * y;
         }
 
-        public double Divide(double x, double y)
+        private double Divide(double x, double y)
         {
             return x / y;
         }

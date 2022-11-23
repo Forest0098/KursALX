@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KursALX.Assigments.M2
+namespace KursALX.Assigments.M2.L1
 {
     public class Employee
     {
@@ -17,6 +17,6 @@ namespace KursALX.Assigments.M2
             Name = name;
             SallaryPerMonth = sallary;
             InternshipInMonths = internship;
-        }           
+        }
     }
 }

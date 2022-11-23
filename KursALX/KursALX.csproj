@@ -8,7 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Lessons\M2\" />
+    <ProjectReference Include="..\CommonFunctionalities\CommonFunctionalities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assigments\M2\L2\NewFolder\" />
+    <Folder Include="Lessons\M2\L2\Abstract\" />
   </ItemGroup>
 
 </Project>

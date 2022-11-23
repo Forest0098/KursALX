@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KursALX.Assigments.M2;
 
-namespace KursALX.Assigments.M2
+namespace KursALX.Assigments.M2.L1
 {
     public class SeniorityServiceTest
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KursALX.Assigments.M2
+namespace KursALX.Assigments.M2.L1
 {
     public class SeniorityService
     {
@@ -29,7 +29,7 @@ namespace KursALX.Assigments.M2
             {
                 SeniorEmployees.Add(employee);
             }
-            else 
+            else
             {
                 MidEmployees.Add(employee);
             }
